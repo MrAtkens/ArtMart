@@ -1,0 +1,128 @@
+.pieces-slider {
+	position: relative;
+	text-align: center;
+	width: 50vw;
+	height: 50vh;
+		left: 55%;
+		bottom:5%;
+}
+
+.js .pieces-slider {
+	padding: 0;
+}
+
+/* Make all slides absolutes and hide them */
+.js .pieces-slider__slide {
+	position: absolute;
+	right: 100%;
+}
+
+/* Define image dimensions and also hide them */
+.pieces-slider__image {
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.js .pieces-slider__image {
+	visibility: hidden;
+}
+
+/* Hide the titles */
+.js .pieces-slider__text {
+	text-indent: -9999px;
+}
+
+/* Canvas with viewport width and height */
+.js .pieces-slider__canvas {
+	position: relative;
+	width: 50vw;
+	height: 50vh;
+	transition: 0.2s opacity;
+}
+
+
+/* Class for when we resize */
+.pieces-slider__canvas--hidden {
+	opacity: 0;
+	transition-duration: 0.3s;
+}
+
+/* Navigation buttons */
+.pieces-slider__button {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 80px;
+	height: 80px;
+
+	background-color: #5104ab;
+	color: #fff;
+	font-family: inherit;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	transition: 0.1s background-color;
+}
+
+.pieces-slider__button:hover {
+	background: #5f3abf;
+}
+
+.pieces-slider__button--next {
+	left: auto;
+	right: 0;
+}
+
+/* Hide the buttons when no JS */
+.no-js .pieces-slider__button {
+	display: none;
+}
+#itemART{
+	visibility: collapse;
+}
+#itemART2{
+	visibility: collapse;
+}
+#itemART3{
+	visibility: collapse;
+}
+#itemART4{
+	visibility: collapse;
+}
+#itemART5{
+	visibility: collapse;
+}
+
+
+/* Media queries with styles for smaller screens */
+@media screen and (max-width: 720px) {
+	.pieces-slider__image {
+		max-width: 300px;
+}
+.pieces-slider{
+	display: none;
+visibility: collapse;
+				}
+}
+
+@media screen and (max-width: 1280px) {
+	.pieces-slider{
+		display: none;
+	visibility: collapse;
+					}
+#itemART{
+	visibility: visible;
+}
+#itemART2{
+	visibility: visible;
+}
+#itemART3{
+	visibility: visible;
+}
+#itemART4{
+	visibility: visible;
+}
+#itemART5{
+	visibility: visible;
+}
+}
